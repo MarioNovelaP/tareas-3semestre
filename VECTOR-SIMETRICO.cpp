@@ -29,12 +29,15 @@ int simetrico(int vec[],int ini,int fin)
 {
 	if (ini<fin)
 	{
-		return 0;
-		ini++;
-		fin--;
-	}	
-    
+		if (vec[ini]!=vec[fin])
+			return 0;
+		else
+		{
+			ini++;
+			fin--;
+			return simetrico(vec,ini,fin);
+		}
+	}
 	else
-		return simetrico(vec,ini,fin);
 		return 1;
 }
