@@ -1,7 +1,7 @@
 #include<iostream>
 #include<stdlib.h>
 
-//int buscaNum(int vec[],int ini,int mat[][2],int a);
+int buscaNum(int vec[],int ini,int mat[][2],int a);
 using namespace std;
 int main()
 {
@@ -26,10 +26,10 @@ int main()
 		}
 		cout<<"\n";
 	}
-//	buscaNum(vec,0,mat,a);
+	buscaNum(vec,0,mat,a);
 }
-//int buscaNum(int vec[],int ini,int mat[][2],int a,)
-//{
+int buscaNum(int vec[],int ini,int mat[][2],int a,)
+{
 	
-//}	
+}	
 	
