@@ -5,7 +5,7 @@ int simetrico(int vec[],int ini, int fin);
 using namespace std;
 int main()
 {
-	int x,pos=1,sim=0,n=0,ini=0;
+	int x,pos=1,n=0;
 	cout<<"ingresa el tamano del vector: ";
 	cin>>n;
 	int vec[n];
@@ -14,12 +14,12 @@ int main()
 		cout<<"ingresa numero en la posicion ["<<pos++<<"]: ";
 		cin>>vec[x];
 	}
-//	simetrico(vec,0,0);
-	if(simetrico(vec,0,0)==0)
+
+	if(simetrico(vec,0,n-1)==0)
 	{
 		cout<<"NO ES SIMETRICO";
 	}
-	else if(simetrico(vec,0,0)==1) 
+	else 
 		cout<<"ES SIMETRICO";
 		
 return 0;
@@ -29,23 +29,12 @@ int simetrico(int vec[],int ini,int fin)
 {
 	if (ini<fin)
 	{
-		++ini;
-		--fin;
-		             //if(vec[ini]==' ')
-		//	return simetrico(vec,++ini,fin);
-		             //if(vec[fin]==' ')
-		//	return simetrico(vec,ini,--fin);
-		if (vec[ini]!=vec[fin])
-			return 0;
-		else
-		{
-			ini++;
-			fin--;
-			return simetrico(vec,ini,fin);
-		}
-	}
+		return 0;
+		ini++;
+		fin--;
+	}	
+    
 	else
+		return simetrico(vec,ini,fin);
 		return 1;
 }
-
-	
