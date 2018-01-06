@@ -5,7 +5,8 @@ int buscaNum(int vec[],int ini,int mat[][2],int a);
 using namespace std;
 int main()
 {
-	int x,r,c,b=1,pos=1,n=0,a=2;
+	
+	int x,rt,r,c,b=1,pos=1,n=0,a=2;
 	cout<<"ingresa el tamano del vector: ";
 	cin>>n;
 	int vec[n];
@@ -15,21 +16,43 @@ int main()
 		cin>>vec[x];
 	}
 	cout<<"renglones para matriz: ";
-	cin>>r;
-	int mat [r][2];
-	for(r=0;r<a;r++)
+	cin>>rt;
+	
+	int mat [][2]={{0}};
+	for(r=0;r<rt;r++)
 	{
-		for(c=0;c<a;c++)
-		{
-			mat[r][c]=rand()%50+1;
-			cout<<mat[r][c];
-		}
+		mat[r][0]=rand()%50+1;
+		cout<<mat[r][0]; //borrar luego
 		cout<<"\n";
 	}
-	buscaNum(vec,0,mat,a);
+buscaNum(vec,0,n-1,mat,rt);
 }
-int buscaNum(int vec[],int ini,int mat[][2],int a,)
+ int buscaNum(int vec[],int ini,int fin,int mat[][2],int rt)
 {
-	
-}	
+	int num;
+	for(int r=0;r<rt;r++)//recorre matriz
+	{
+		for(int x=0;x<rt;x++)//recorre vector
+	  	{
+	  		if(mat[r][0]==vec[x])
+	  		{
+	  			mat[r][1]=x;
+	  			//cout<<mat[r][1];
+			}
+			else
+			{
+				mat[r][1]=-1;
+	  			//cout<<mat[r][1];
+			}
+		}
+	}
+		for(int r=0;r<rt;r++)//recorre matriz
+	{
+		cout<<mat[r][rt]<<endl;
+    }
+    for(int r=0;r<=1;r++)//recorre matriz
+	{
+		cout<<mat[r][1];
+    }
+} 	
 	
