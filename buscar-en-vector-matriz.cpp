@@ -29,7 +29,7 @@ buscaNum(vec,0,n-1,mat,rt);
 }
  int buscaNum(int vec[],int ini,int fin,int mat[][2],int rt)
 {
-	int num;
+	int band=0;
 	for(int r=0;r<rt;r++)//recorre matriz
 	{
 		for(int x=0;x<rt;x++)//recorre vector
@@ -37,18 +37,18 @@ buscaNum(vec,0,n-1,mat,rt);
 	  		if(mat[r][0]==vec[x])
 	  		{
 	  			mat[r][1]=x;
-	  			//cout<<mat[r][1];
-			}
-			else
-			{
-				mat[r][1]=-1;
+	  			band=1;
 	  			//cout<<mat[r][1];
 			}
 		}
+		if(band==0)
+		{
+			mat[r][1]=-1;
+		}
 	}
-		for(int r=0;r<rt;r++)//recorre matriz
+	for(int r=0;r<rt;r++)//recorre matriz
 	{
-		cout<<mat[r][rt]<<endl;
+	    cout<<mat[r][rt]<<endl;
     }
     for(int r=0;r<=1;r++)//recorre matriz
 	{
