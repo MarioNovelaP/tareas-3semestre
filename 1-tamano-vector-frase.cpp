@@ -13,7 +13,6 @@ int main()
 	cin.getline(c1,100,'\n');
 	
 	tam(c1,vec);
-	return 0;
 }
 
 void tam(char c1[],int vec)
