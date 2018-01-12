@@ -21,10 +21,9 @@ int main()
 	}
 	else 
 		cout<<"ES SIMETRICO";
-		
 return 0;
-}
 
+}
 int simetrico(int vec[],int ini,int fin)
 {
 	if (ini<fin)
@@ -33,11 +32,11 @@ int simetrico(int vec[],int ini,int fin)
 			return 0;
 		else
 		{
-			ini++;
-			fin--;
-			return simetrico(vec,ini,fin);
+			return simetrico(vec,++ini,--fin);
 		}
 	}
 	else
 		return 1;
 }
+
+	
